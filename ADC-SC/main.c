@@ -34,10 +34,21 @@ int readADC(uint8_t adc_channel){
 	}
 	return ADC;
 }
-void
 
 void display(int valueOfADC){
 	
+	int ones;
+	int tens;
+	int hundreds;
+	int thousands;
+	
+	thousands = (valueOfADC/1000)%10;
+	hundreds = (valueOfADC/100)%10;
+	tens = (valueOfADC/10)%10;
+	ones = (valueOfADC/1)%10;
+	
+	PORTA = ones | (tens<<4);
+	PORTC = hundreds | (thousands<<4);
 }
 
 int main(void)
