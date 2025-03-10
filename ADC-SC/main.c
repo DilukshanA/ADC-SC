@@ -54,9 +54,12 @@ void display(int valueOfADC){
 int main(void)
 {
 	int adcValue;
+	
 	// Initialize hardware and ADC
 	initHardware();
+	
 	initADC();
+	
 	while (1)
 	{
 		// Read ADC value from channel 0
