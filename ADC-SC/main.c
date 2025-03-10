@@ -7,6 +7,19 @@ void initHardware(void){
 	DDRC = 0B11111111; //setting all C pins to output
 }
 
+void initADC(void){
+	
+}
+
+
+int readADC(uint8_t adc_channel){
+	
+}
+
+void display(int valueOfADC){
+	
+}
+
 int main(void)
 {
     /* Replace with your application code */

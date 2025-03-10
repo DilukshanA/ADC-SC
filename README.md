@@ -4,7 +4,8 @@
 Anlog signal Digital conversion and Display using 7 segment LED
 
 ## step 01 - settings for ADMUX register
-ADMUX
+ADMUX - Select Reference/External Voltage - REFS[1-0] = 0
+      - Selecting input ADC0 - MUX[3-0] = 0
 
 ## Step 02 - setting ADCSRA register
 Pre scaler
