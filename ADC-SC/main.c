@@ -53,9 +53,19 @@ void display(int valueOfADC){
 
 int main(void)
 {
-    /* Replace with your application code */
-    while (1) 
-    {
-    }
+	int adcValue;
+	// Initialize hardware and ADC
+	initHardware();
+	initADC();
+	while (1)
+	{
+		// Read ADC value from channel 0
+		adcValue = readADC(0);
+		// Display the ADC value
+		display(adcValue);
+		// Delay for 1 second
+		_delay_ms(1000);
+	}
+	return 0;
 }
 
