@@ -25,7 +25,16 @@ void initADC(void){
 
 int readADC(uint8_t adc_channel){
 	
+	ADMUX |= (ADMUX & 0xF0)|adc_channel; //Input selection
+	ADCSRA |= (1<<ADSC);// Start the ADC conversion
+	
+	while(ADCSRA & (1<<ADSC)){
+		// loops until ADSC pin becomes zero
+		//this will do Polling
+	}
+	return ADC;
 }
+void
 
 void display(int valueOfADC){
 	
